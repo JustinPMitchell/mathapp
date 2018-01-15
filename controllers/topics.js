@@ -1,5 +1,8 @@
 var express = require("express");
+var request = require("request");
 var async = require("async");
+const YouTube = require('simple-youtube-api');
+const youtube = new YouTube('AIzaSyAER7smNa4bB93er89grghZjm96mYPV6OI');
 var router = express.Router();
 var isLoggedIn = require('../middleware/isLoggedIn');
 var db = require("../models");
@@ -12,13 +15,32 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(req, res) {
-  db.topic.create(req.body).then(function(createdTopic) {
-    res.redirect("/topics/" + createdTopic.id);
-  }).catch(function(err){
-    console.log("err", err);
-    res.send("uh oh!");
-  });
+// POST - receive the name of a topic and add it to the database
+// this is where the video will be processed from the keyword and the youtube api added to the database
+router.post('/', function(req, res) {
+    console.log("this is the req.body.title", req.body.title);
+    var youtubeSearch = "";
+
+    //takes in 4 videos and passes the first one to youtubeSearch
+    youtube.searchVideos(req.body.keyword, 4)
+        .then(results => {
+            console.log(`The video's url is ${results[0].url}`);
+            youtubeSearch = results[0].url;
+        })
+        .catch(console.log);
+
+    //don't like this solution, but it works, it allows the searchVideos thing to happen
+    setTimeout( function() {
+      db.topic.create({
+        title: req.body.title,
+        keyword: req.body.keyword,
+        url: youtubeSearch
+      }).then(function(createdTopic) {
+        res.redirect("topics/" + createdTopic.id);
+      }).catch(function(err) {
+        res.send("uh oh!", err);
+      });
+    }, 1000);
 });
 
 //need to have put route, but don't know how to say edit topic

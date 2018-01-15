@@ -2,6 +2,12 @@
 
 <h2>Answer the questions below</h2>
 
+<p>Maybe this video will help</p>
+<h4 class="text-center"><%= topic.keyword %></h4>
+<h4 class="text-center"><%= topic.url %></h4>
+<% var res = "https://www.youtube.com/embed/" + topic.url.slice(32); %>
+<iframe width="420" height="315" src="<%= res %>"></iframe>
+
 <hr>
 <form>
   <% if(topic.problems && topic.problems.length > 0) { %>

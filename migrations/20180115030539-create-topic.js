@@ -11,6 +11,12 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      keyword: {
+        type: Sequelize.STRING
+      },
+      url: {
+        type: Sequelize.STRING
+      },
       userId: {
         type: Sequelize.INTEGER
       },
