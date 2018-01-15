@@ -24,6 +24,8 @@ app.use(function(req, res, next){
   res.locals.alerts = req.flash();
   next();
 });
+app.use(express.static(__dirname + "/public/"));
+
 
 app.get('/', function(req, res){
   res.render('home');
@@ -34,5 +36,7 @@ app.get('/profile', isLoggedIn, function(req, res){
 });
 
 app.use('/auth', require('./controllers/auth'));
+app.use("/problems", require("./controllers/problems.js"));
+app.use("/topics", require("./controllers/topics.js"));
 
 app.listen(process.env.PORT || 3000);

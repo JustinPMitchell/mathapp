@@ -1,0 +1,46 @@
+<h2 class="text-center"><%= topic.title %></h2>
+
+
+<p>This is the content for the above topic.</p>
+
+<hr>
+<h3>Add Question</h3>
+<form method="post" action="/problems">
+  <div class="form-group">
+    <label>Question:</label>
+    <input type="text" name="question" placeholder="question" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Correct Answer:</label>
+    <input type="text" name="correctanswer" placeholder="correct answer" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Alternate Answer Choice:</label>
+    <input type="text" name="incorrectanswerone" placeholder="alternate answer choice" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Alternate Answer Choice:</label>
+    <input type="text" name="incorrectanswertwo" placeholder="alternate answer choice" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Alternate Answer Choice:</label>
+    <input type="text" name="incorrectanswerthree" placeholder="alternate answer choice" class="form-control">
+  </div>
+  <input type="hidden" name="topicId" value="<%= topic.id %>">
+  <input type="submit" name="btn btn-info">
+</form>
+<hr>
+<% if(topic.problems && topic.problems.length > 0) { %>
+<h3>Added Questions</h3>
+<% topic.problems.forEach(function(p) { %>
+  <div>
+    <h3><%= p.question %></h3>
+    <p><%= p.correctanswer %></p>
+    <p><%= p.incorrectanswerone %></p>
+    <p><%= p.incorrectanswertwo %></p>
+    <p><%= p.incorrectanswerthree %></p>
+  </div>
+<% }); %>
+<% } else { %>
+  <h2>Be the first to add a question on this topic</h2>
+<% } %>

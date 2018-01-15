@@ -1,0 +1,87 @@
+<h2 class="text-center"><%= topic.title %></h2>
+
+<h2>Answer the questions below</h2>
+
+<hr>
+<form>
+  <% if(topic.problems && topic.problems.length > 0) { %>
+  <% topic.problems.forEach(function(p) { %>
+    <div>
+      <% var answers = [p.correctanswer, p.incorrectanswerone, p.incorrectanswertwo, p.incorrectanswerthree]; %>
+      <% var score = 0; %>
+      <%
+        function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+        }
+
+        // Used like so
+        answers = shuffle(answers);
+
+        console.log(answers); 
+      %>
+      <%
+        var correctNumber; 
+        for(var i = 0; i < answers.length; i++) {
+          if(answers[i] === p.correctanswer) {
+
+            console.log("this is the correct answer", answers[i]);
+            correctNumber = i;
+            // document.getElementsByClassName('.answer:eq(' + i + ')').hide();
+          }
+        } 
+        console.log("this is the correct number", correctNumber);
+      %>
+      <form>
+        <div class="question">
+          <h3><%= p.id %>. <%= p.question %></h3>
+          <div class="radio">
+            <label class="<%=(correctNumber == 0) ? " correct" : " incorrect"%>">
+              <input class="answer" type="radio" name="optradio<%=+p.id%>" checked="checked"><%= answers[0] %>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="<%=(correctNumber == 1) ? " correct" : " incorrect"%>">
+              <input class="answer" type="radio" name="optradio<%=+p.id%>"><%= answers[1] %>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="<%=(correctNumber == 2) ? " correct" : " incorrect"%>">
+              <input class="answer" type="radio" name="optradio<%=+p.id%>"><%= answers[2] %>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="<%=(correctNumber == 3) ? " correct" : " incorrect"%>">
+              <input class="answer" type="radio" name="optradio<%=+p.id%>"><%= answers[3] %>
+            </label>
+          </div>
+          <a href="#" class="btn btn-primary next">Next Question</a>
+        </div>
+      </form>
+    </div>   
+  <% }); %>
+  <% } else { %>
+    <h2>Be the first to add a question on this topic insert link here</h2>
+  <% } %>
+  <div class="finish-screen">
+    <p>You are all done, submit your quiz to see your results</p>
+    <a href="#" class="btn btn-info submit-quiz">Submit Quiz</a>
+  </div>
+  <div class="score-screen">
+    <p>This is the score:</p>
+  </div>
+</form>

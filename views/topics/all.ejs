@@ -1,0 +1,22 @@
+<h1 class="text-center">All the topics you can handle!</h1>
+
+<% if(topics.length <= 0) { %>
+  <h2>Nothing in the database yet!</h2>
+<% } else { %>
+  <% topics.forEach(function(item) { %>
+    <h3>
+      <a href="/topics/<%= item.id %>">
+        <%= item.title %>
+      </a>
+    </h3>
+    <a href="/topics/<%= item.id %>" class="btn btn-danger delete-link">
+      Delete Topic
+    </a>
+    <a href="/topics/edit/<%= item.id %>" class="btn btn-success">
+      Edit Topic
+    </a>
+    <a href="/topics/take/<%= item.id %>" class="btn btn-info">
+      Take Topic
+    </a>
+  <% }); %>
+<% } %>
