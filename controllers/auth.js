@@ -68,23 +68,3 @@ router.get('/callback/facebook', passport.authenticate('facebook', {
 }));
 
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
