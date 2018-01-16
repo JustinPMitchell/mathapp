@@ -76,5 +76,5 @@ Your students are dying to learn new technologies. Let's show them how it's done
 
 ## Acknowledgments
 
-* Special Thanks to Jordan Krissi, Jade Rosse, Jacquelyn Marcella
+* Special Thanks to Jordan Krissi, [Jade Rosse](https://github.com/jaderosse), [Jacquelyn Marcella](https://github.com/jacquelynmarcella)
 * Inspiration came from Duolingo
