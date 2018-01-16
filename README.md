@@ -1,9 +1,9 @@
 # MathyMathy
-<div>
+<div text-align="center">
   <img src="./img/cellphone-view.png" align="center" height="400" width="250" >
   <img src="./img/labtop-view.png" align="center" height="270" width="400" >
 </div>
-<div>
+<div text-align="center">
   <img src="./img/wireframe.jpg" align="center" height="270" width="400" >
   <img src="./img/folderlayout.jpg" align="center" height="270" width="400" >
   <img src="./img/trello.png" align="center" height="270" width="400" >
