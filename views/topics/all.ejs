@@ -1,22 +1,35 @@
-<h1 class="text-center">All the topics you can handle!</h1>
+<h1 class="text-center">Let's take a Quiz!</h1>
+
+
 
 <% if(topics.length <= 0) { %>
-  <h2>Nothing in the database yet!</h2>
+  <h1>Nothing in the database yet!</h1>
 <% } else { %>
-  <% topics.forEach(function(item) { %>
-    <h3>
-      <a href="/topics/<%= item.id %>">
-        <%= item.title %>
-      </a>
-    </h3>
-    <a href="/topics/<%= item.id %>" class="btn btn-danger delete-link">
-      Delete Topic
-    </a>
-    <a href="/topics/edit/<%= item.id %>" class="btn btn-success">
-      Edit Topic
-    </a>
-    <a href="/topics/take/<%= item.id %>" class="btn btn-info">
-      Take Topic
-    </a>
-  <% }); %>
+ 
+    <% topics.forEach(function(item) { %>
+      <div class="topic-container">
+        <h3>
+          <%= item.title %>
+        </h3>
+        <% var res = "https://www.youtube.com/embed/" + item.url.slice(32); %>
+        <iframe width="100%" height="200" src="<%= res %>"></iframe>
+        <% if(currentUser){ %>
+          <a href="/topics/take/<%= item.id %>" class="btn btn-info topic-nav">
+            Take Quiz
+          </a>
+          <a href="/topics/edit/<%= item.id %>" class="btn btn-success topic-nav">
+            Edit Quiz
+          </a>
+          <a href="/topics/<%= item.id %>" class="btn btn-danger delete-link topic-nav">
+            Delete Quiz
+          </a>
+        <% } else { %>
+          <a href="/topics/take/<%= item.id %>" class="btn btn-info">
+            Take Quiz
+          </a>
+        <% } %>
+      </div>
+    <% }); %>
+
 <% } %>
+

@@ -14,13 +14,15 @@ function nextPressed() {
 
   if(current === document.getElementsByClassName("next").length) {
     console.log("quiz is done");
-    $('.finish-screen').show();
+    submitQuiz();
+
   }
 }
 
 function submitQuiz() {
   $(".finish-screen").hide();
   $(".score-screen").show();
+  $(".youtube").hide();
   //i want to compare the result of the radio button selected to the correct answer
   //gets an array of chosen answers
   for(var i = 0; i < $(".answer").length; i++) {
@@ -44,7 +46,8 @@ function submitQuiz() {
     }
   }
   console.log("this is the score", score);
-  document.getElementsByClassName("score-screen")[0].textContent += score;
+  document.getElementsByClassName("amount-correct")[0].textContent += score + " question(s) correct.";
+  document.getElementsByClassName("percent-correct")[0].textContent += Math.floor((score / $(".question").length)*100) + "%";
 }
 
 $(document).ready(function() {

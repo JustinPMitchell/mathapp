@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mathapp</title>
+  <title>MathyMathy</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
   <% include partials/navbar %>
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <div class="sub-navbar-container">
+          <% if(currentUser){ %>
+            <a href="/topics" class="btn btn-primary">Quiz Library</a>
+            <a href="/topics/new" class="btn btn-warning">New Quiz</a>
+          <% } else { %>
+            <a href="/topics" class="btn btn-primary">View Quiz Library</a>
+          <% } %>
+
+        </div>
+        <hr>
         <% include partials/alerts %>
         <%- body %>
 
-        <hr>
-        <div class="container">
-          <a href="/" class="btn btn-primary">Home Page</a>
-          <a href="/topics" class="btn btn-primary">View Topics</a>
-          <a href="/topics/new" class="btn btn-warning">New Topic</a>
-        </div>
+
       </div>
     </div>
   </div>

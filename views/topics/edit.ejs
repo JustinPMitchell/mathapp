@@ -1,11 +1,53 @@
 <div>
-  <h2 class="text-center"><%= topic.title %>: How would you like to edit this topic?</h2>
-
-  <form class="put-form" action="/topics/<%= topic.id %>">
-    <div class="form-group">
-      <label for="title">Title:</label>
-      <input id="title" type="text" name="title" placeholder="title of the topic" class="form-control">
-    </div>
-    <input type="submit" value="Update Title" class="btn btn-success">
-  </form>
+  <h2 class="text-center"><%= topic.title %>: How would you like to edit this quiz?</h2>
+  <hr>
+    <form class="put-form" action="/topics/<%= topic.id %>">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="title" placeholder="title of the topic" class="form-control">
+      </div>
+      <input type="submit" value="Update Title" class="btn btn-success">
+    </form>
+  <hr>
+    <h3>Add Question</h3>
+    <form method="post" action="/problems">
+      <div class="form-group">
+        <label>Question:</label>
+        <input type="text" name="question" placeholder="question" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Correct Answer:</label>
+        <input type="text" name="correctanswer" placeholder="correct answer" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Alternate Answer Choice:</label>
+        <input type="text" name="incorrectanswerone" placeholder="alternate answer choice" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Alternate Answer Choice:</label>
+        <input type="text" name="incorrectanswertwo" placeholder="alternate answer choice" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Alternate Answer Choice:</label>
+        <input type="text" name="incorrectanswerthree" placeholder="alternate answer choice" class="form-control">
+      </div>
+      <input type="hidden" name="topicId" value="<%= topic.id %>">
+      <a type="submit" class="btn btn-info">Add Question</a>
+    </form>
+    <hr>
+    <% if(topic.problems && topic.problems.length > 0) { %>
+    <h3>Added Questions</h3>
+    <% topic.problems.forEach(function(p) { %>
+      <div>
+        <h3><%= p.question %></h3>
+        <p><%= p.correctanswer %></p>
+        <p><%= p.incorrectanswerone %></p>
+        <p><%= p.incorrectanswertwo %></p>
+        <p><%= p.incorrectanswerthree %></p>
+      </div>
+    <% }); %>
+    <% } else { %>
+      <h2>Be the first to add a question on this topic</h2>
+    <% } %>
+  <hr>
 </div>

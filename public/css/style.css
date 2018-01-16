@@ -1,0 +1,165 @@
+.navbar {
+  background: #031424;
+  font-size: 30px;
+  color: white;
+}
+
+.sub-navbar-container {
+  text-align: center;
+}
+
+body {
+  background: #CF6766;
+}
+
+.btn {
+  background: #30415D;
+  font-size: 30px;
+}
+
+.next {
+  width: 80%;
+  margin: 5% 10%;
+  border-radius: 50px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.youtube {
+  text-align: center;
+}
+
+.radio {
+  border: 5px solid #30415D;
+  border-radius: 10%;
+  display: inline-block;
+  width: 45%;
+  height: 300px;
+  font-size: 300%;
+  line-height: 270px;
+  padding: 2% 5%;
+  margin: 2%;
+  background: #8EAEBD;
+}
+
+.answer-container {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  line-height: 230px;
+}
+
+.correct input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.incorrect input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.correct:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.correct input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.correct input:checked ~ .checkmark {
+    background-color: rgba(200, 0, 0, 1);
+}
+
+.correct input:checked ~ .radio {
+    background: red;
+}
+
+.incorrect:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.incorrect input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.incorrect input:checked ~ .checkmark {
+    background-color: rgba(200, 0, 0, 1);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.correct .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.incorrect input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.incorrect .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.score-screen {
+  border: 3px solid black;
+  background: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 5%;
+}
+
+.topic-container {
+  border: 3px solid black;
+  border-radius: 50px;
+  width: 45%;
+  display: inline-block;
+  text-align: center;
+  margin: 2%;
+  padding: .5%;
+}
+
+.topic-nav {
+  border-radius: 50px;
+  font-size: 25px;
+}
