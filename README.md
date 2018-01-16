@@ -1,5 +1,9 @@
 # MathyMathy
 
+![picture](./img/cellphone-view.png)
+![picture](./img/labtop-view.png)
+![picture](./img/wireframe.jpg)
+![picture](./img/folderlayout.jpg)
 ![picture](./img/trello.png)
 
 You'd be surprised how much you can learn from quizzing and watching youtube.
