@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: "taco",
   resave: false,
   saveUninitialized: true
 }));
