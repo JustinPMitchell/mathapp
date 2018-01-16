@@ -1,10 +1,10 @@
 # MathyMathy
 
-![picture](./img/cellphone-view.png | width=100)
-![picture](./img/labtop-view.png | | width=100)
-![picture](./img/wireframe.jpg | | width=100)
-![picture](./img/folderlayout.jpg | | width=100)
-![picture](./img/trello.png | | width=100)
+![picture](./img/cellphone-view.png){:height="36px" width="36px"}
+![picture](./img/labtop-view.png){:height="36px" width="36px"}
+![picture](./img/wireframe.jpg){:height="36px" width="36px"}
+![picture](./img/folderlayout.jpg){:height="36px" width="36px"}
+![picture](./img/trello.png){:height="36px" width="36px"}
 
 You'd be surprised how much you can learn from quizzing and watching youtube.
 
