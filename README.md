@@ -1,4 +1,11 @@
 # MathyMathy
+
+You'd be surprised how much you can learn from quizzing and watching youtube.
+
+If you are a teacher, MathyMathy was designed for you. Spice up some of your lesson plans with our handy quiz-making app. Or have your students login and create their own quizzes.
+
+Your students are dying to learn new technologies. Let's show them how it's done.
+
 <div style="text-align:center" margin="auto">
   <img src="./img/cellphone-view.png" align="center" height="400" width="250" >
   <img src="./img/wireframe.jpg" align="center" height="400" width="250" >
@@ -10,11 +17,6 @@
 <div style="text-align:center" margin="auto">
   <img src="./img/trello.png" align="center" height="270" width="400" >
 </div>
-You'd be surprised how much you can learn from quizzing and watching youtube.
-
-If you are a teacher, MathyMathy was designed for you. Spice up some of your lesson plans with our handy quiz-making app. Or have your students login and create their own quizzes.
-
-Your students are dying to learn new technologies. Let's show them how it's done.
 
 ## Technical Requirements
 
