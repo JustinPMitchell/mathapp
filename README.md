@@ -1,15 +1,10 @@
 # MathyMathy
 
-![picture](./img/cellphone-view.png){:height="36px" width="36px"}
-![picture](./img/labtop-view.png){:height="36px" width="36px"}
-![picture](./img/wireframe.jpg){:height="36px" width="36px"}
-![picture](./img/folderlayout.jpg){:height="36px" width="36px"}
-![picture](./img/trello.png){:height="36px" width="36px"}
-<img src="./img/cellphone-view.png" align="left" height="48" width="48" >
-<img src="./img/labtop-view.png" align="left" height="48" width="48" >
-<img src="./img/wireframe.jpg" align="left" height="48" width="48" >
-<img src="./img/folderlayout.jpg" align="left" height="48" width="48" >
-<img src="./img/trello.png" align="left" height="48" width="48" >
+<img src="./img/cellphone-view.png" align="left" height="200" width="100" >
+<img src="./img/labtop-view.png" align="left" height="100" width="100" >
+<img src="./img/wireframe.jpg" align="left" height="100" width="100" >
+<img src="./img/folderlayout.jpg" align="left" height="100" width="100" >
+<img src="./img/trello.png" align="left" height="100" width="100" >
 
 
 You'd be surprised how much you can learn from quizzing and watching youtube.
