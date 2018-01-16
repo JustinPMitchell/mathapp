@@ -1,11 +1,11 @@
 # MathyMathy
-
-<img src="./img/cellphone-view.png" align="left" height="200" width="100" >
-<img src="./img/labtop-view.png" align="left" height="100" width="100" >
-<img src="./img/wireframe.jpg" align="left" height="100" width="100" >
-<img src="./img/folderlayout.jpg" align="left" height="100" width="100" >
-<img src="./img/trello.png" align="left" height="100" width="100" >
-
+<div>
+  <img src="./img/cellphone-view.png" align="center" height="400" width="200" >
+  <img src="./img/labtop-view.png" align="center" height="170" width="200" >
+  <img src="./img/wireframe.jpg" align="center" height="170" width="200" >
+  <img src="./img/folderlayout.jpg" align="center" height="170" width="200" >
+  <img src="./img/trello.png" align="center" height="170" width="200" >
+</div>
 
 You'd be surprised how much you can learn from quizzing and watching youtube.
 
