@@ -1,13 +1,13 @@
 # MathyMathy
-<div margin="auto">
+<div style="text-align:center" margin="auto">
   <img src="./img/cellphone-view.png" align="center" height="400" width="250" >
   <img src="./img/wireframe.jpg" align="center" height="400" width="250" >
 </div>
-<div margin="auto">
+<div style="text-align:center" margin="auto">
   <img src="./img/labtop-view.png" align="center" height="270" width="400" >
   <img src="./img/folderlayout.jpg" align="center" height="270" width="400" >
 </div>
-<div margin="auto">
+<div style="text-align:center" margin="auto">
   <img src="./img/trello.png" align="center" height="270" width="400" >
 </div>
 You'd be surprised how much you can learn from quizzing and watching youtube.
