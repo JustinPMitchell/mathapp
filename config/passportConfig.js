@@ -35,8 +35,8 @@ passport.use(new localStrategy({
 }));
 
 passport.use(new facebookStrategy({
-  clientID: process.env.FACEBOOK_APP_ID,
-  clientSecret: process.env.FACEBOOK_APP_SECRET,
+  clientID: 148572079261169,
+  clientSecret: 34b532e8254cb019ada41df16568972a,
   callbackURL: process.env.BASE_URL + '/auth/callback/facebook',
   profileFields: ['id', 'email', 'displayName'],
   enableProof: true
